@@ -38,8 +38,9 @@ class TicTacToe
     @board[location] != " " && @board[location] != ""
   end
 
-  def valid_move?(board, index)
-    if board[index] == 'X' || board[index] == 'O'
+  def valid_move?(index)
+    @index = index
+    if @board[index] == 'X' || board[index] == 'O'
       return false
     elsif index >=0 && index <=8
         return true
