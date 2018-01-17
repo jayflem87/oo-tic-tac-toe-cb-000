@@ -34,13 +34,11 @@ class TicTacToe
   end
 
   def position_taken?(location)
-    @location = location
     @board[location] != " " && @board[location] != ""
   end
 
   def valid_move?(index)
-    @index = index
-    if @board[index] == 'X' || board[index] == 'O'
+    if @board[index] == 'X' || @board[index] == 'O'
       return false
     elsif index >=0 && index <=8
         return true
