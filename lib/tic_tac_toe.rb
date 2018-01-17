@@ -86,7 +86,7 @@ class TicTacToe
   def won?
     x_positions = []
     o_positions = []
-    board.each_index do |position|
+    @board.each_index do |position|
       if @board[position] == "X"
         x_positions << position
       elsif @board[position] == "O"
