@@ -55,4 +55,21 @@ class TicTacToe
     return turn_count
   end
 
+  def current_player
+    x_moves = 0
+    o_moves = 0
+    @board.each do |move|
+      if move == "X"
+        x_moves += 1
+      elsif move == "O"
+        o_moves += 1
+      end
+    end
+    if x_moves > o_moves
+      return "O"
+    else
+      return "X"
+    end
+  end
+
 end
