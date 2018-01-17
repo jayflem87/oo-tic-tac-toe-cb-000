@@ -156,7 +156,6 @@ class TicTacToe
     until over? do
       turn
     end
-    winner = winner
     if draw?
       puts "Cat's Game!"
     else
