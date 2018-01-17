@@ -132,4 +132,24 @@ class TicTacToe
     end
   end
 
+  def winner
+    x_positions = []
+    o_positions = []
+    @board.each_index do |position|
+      if @board[position] == "X"
+        x_positions << position
+      elsif @board[position] == "O"
+        o_positions << position
+      end
+    end
+    WIN_COMBINATIONS.each do |win_combo|
+      if (win_combo - x_positions).empty?
+        return "X"
+      elsif (win_combo - o_positions).empty?
+        return "O"
+      end
+    end
+    return nil
+  end
+
 end
