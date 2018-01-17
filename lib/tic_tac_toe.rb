@@ -108,11 +108,27 @@ class TicTacToe
         empty_spaces += 1
       end
     end
-    
+
     if empty_spaces > 0
       return false
     else
       return true
+    end
+  end
+
+  def draw?
+    if full?(@board) && !won?(@board)
+      return true
+    else
+      return false
+    end
+  end
+
+  def over?
+    if draw?(@board) || won?(@board) || full?(@board)
+      return true
+    else
+      return false
     end
   end
 
