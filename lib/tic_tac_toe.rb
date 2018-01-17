@@ -101,4 +101,19 @@ class TicTacToe
     return false
   end
 
+  def full?
+    empty_spaces = 0
+    @board.each do |position|
+      if position == " "
+        empty_spaces += 1
+      end
+    end
+    
+    if empty_spaces > 0
+      return false
+    else
+      return true
+    end
+  end
+
 end
